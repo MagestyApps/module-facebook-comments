@@ -25,24 +25,24 @@
                     <source_model>MagestyApps\FBComments\Model\Config\Source\Position</source_model>
                 </field>
 
-                <field id="color_scheme" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="color_scheme" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Color Scheme</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\ColorScheme</source_model>
                     <comment><![CDATA[The color scheme used by the comments plugin.]]></comment>
                 </field>
 
-                <field id="num_posts" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="num_posts" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Number of Comments</label>
                     <comment><![CDATA[The number of comments to show by default. The minimum value is 1.]]></comment>
                 </field>
 
-                <field id="order_by" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="order_by" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Default Order By</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\OrderBy</source_model>
                     <comment><![CDATA[The order to use when displaying comments. Can be "social", "reverse_time", or "time".]]></comment>
                 </field>
 
-                <field id="width" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="width" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Width of the Plugin</label>
                     <comment><![CDATA[The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width. The mobile version of the comments plugin ignores the width parameter and instead has a fluid width of 100%. The minimum width supported by the comments plugin is 320px.]]></comment>
                 </field>
