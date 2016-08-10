@@ -20,8 +20,19 @@ class Comments extends Template
      */
     protected $_helper;
 
+    /**
+     * @var Registry
+     */
     protected $_coreRegistry;
 
+    /**
+     * Comments constructor.
+     *
+     * @param Template\Context $context
+     * @param Data $helper
+     * @param Registry $coreRegistry
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         Data $helper,
@@ -41,10 +52,15 @@ class Comments extends Template
         return $this->_coreRegistry->registry('current_product');
     }
 
+    /**
+     * Get url for facebook comments
+     *
+     * @return string
+     */
     public function getHref()
     {
-        /** @todo remove debug */
-        return 'https://developers.facebook.com/docs/plugins/comments#configurator';
+        //// uncomment for debug purposes
+        //return 'https://developers.facebook.com/docs/plugins/comments#configurator';
 
         $product = $this->getProduct();
 
@@ -56,26 +72,41 @@ class Comments extends Template
         return $url;
     }
 
+    /**
+     * @return mixed
+     */
     public function getColorScheme()
     {
         return $this->_helper->getColorScheme();
     }
 
+    /**
+     * @return mixed
+     */
     public function getNumPosts()
     {
         return $this->_helper->getNumPosts();
     }
 
+    /**
+     * @return mixed
+     */
     public function getOrderBy()
     {
         return $this->_helper->getOrderBy();
     }
 
+    /**
+     * @return mixed
+     */
     public function getWidth()
     {
         return $this->_helper->getWidth();
     }
 
+    /**
+     * @return string
+     */
     protected function _toHtml()
     {
         if (!$this->_helper->isEnabled()

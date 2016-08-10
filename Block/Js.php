@@ -11,8 +11,17 @@ use Magento\Framework\Locale\ResolverInterface;
 
 class Js extends Template
 {
+    /**
+     * @var ResolverInterface
+     */
     protected $_localeResolver;
 
+    /**
+     * Js constructor.
+     * @param Template\Context $context
+     * @param ResolverInterface $localeResolver
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         ResolverInterface $localeResolver,
@@ -22,6 +31,9 @@ class Js extends Template
         $this->_localeResolver = $localeResolver;
     }
 
+    /**
+     * @return string
+     */
     public function getPluginLocale()
     {
         return $this->_localeResolver->getLocale();

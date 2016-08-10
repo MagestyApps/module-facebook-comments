@@ -29,31 +29,61 @@ class Data extends AbstractHelper
     const ORDER_BY_REVERSE_TIME = 'reverse_time';
     const ORDER_BY_TIME         = 'time';
 
+    /**
+     * Get "Enable" setting
+     *
+     * @return bool
+     */
     public function isEnabled()
     {
         return $this->scopeConfig->isSetFlag(self::CONFIG_PATH_ENABLED);
     }
 
+    /**
+     * Get "Block Position" setting
+     *
+     * @return mixed
+     */
     public function getBlockPosition()
     {
         return $this->scopeConfig->getValue(self::CONFIG_PATH_POSITION);
     }
 
+    /**
+     * Get "Color Scheme" setting
+     *
+     * @return mixed
+     */
     public function getColorScheme()
     {
         return $this->scopeConfig->getValue(self::CONFIG_PATH_COLOR_SCHEME);
     }
 
+    /**
+     * Get "Number of Comments" setting
+     *
+     * @return mixed
+     */
     public function getNumPosts()
     {
         return $this->scopeConfig->getValue(self::CONFIG_PATH_NUM_POSTS);
     }
 
+    /**
+     * Get "Default Order By" setting
+     *
+     * @return mixed
+     */
     public function getOrderBy()
     {
         return $this->scopeConfig->getValue(self::CONFIG_PATH_ORDER_BY);
     }
 
+    /**
+     * Get "Width" setting
+     *
+     * @return mixed
+     */
     public function getWidth()
     {
         return $this->scopeConfig->getValue(self::CONFIG_PATH_COLOR_SCHEME);

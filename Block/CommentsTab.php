@@ -11,6 +11,9 @@ use MagestyApps\FBComments\Helper\Data;
 
 class CommentsTab extends Comments
 {
+    /**
+     * @return string
+     */
     protected function _toHtml()
     {
         if ($this->_helper->getBlockPosition() != Data::POSITION_TAB) {
