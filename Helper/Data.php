@@ -86,6 +86,6 @@ class Data extends AbstractHelper
      */
     public function getWidth()
     {
-        return $this->scopeConfig->getValue(self::CONFIG_PATH_COLOR_SCHEME);
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_WIDTH);
     }
 }
