@@ -36,10 +36,6 @@ class InsertCommentsBlock implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        /**
-         * @todo make it work only for catalog_product_view
-         */
-
         if (!$this->_helper->isEnabled()) {
             return $this;
         }
@@ -50,6 +46,10 @@ class InsertCommentsBlock implements ObserverInterface
         $transport = $observer->getEvent()->getTransport();
 
         $commentsBlock = $layout->createBlock('MagestyApps\FBComments\Block\Comments');
+
+        if (!$commentsBlock->getProduct() || !$commentsBlock->getProduct()->getId()) {
+            return $this;
+        }
 
         if (($this->_helper->getBlockPosition() == Data::POSITION_AFTER_DESCRIPTION
                 && $elName == 'product.info.details')
