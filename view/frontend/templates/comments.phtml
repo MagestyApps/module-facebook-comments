@@ -1,0 +1,16 @@
+<!--<style>-->
+<!--    .fb-comments-container { width: 100%; text-align: center; }-->
+<!--</style>-->
+<?php
+
+/** @var \MagestyApps\FBComments\Block\Comments $block */
+?>
+<div class="fb-comments-container">
+<div class="fb-comments"
+     data-href="<?php echo $block->getHref() ?>"
+     data-numposts="<?php echo $block->getNumPosts() ?>"
+     data-colorscheme="<?php echo $block->getColorScheme() ?>"
+     data-order-by="<?php echo $block->getOrderBy() ?>"
+     data-width="<?php echo $block->getWidth() ?>"
+></div>
+</div>

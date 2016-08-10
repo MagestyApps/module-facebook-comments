@@ -1,0 +1,57 @@
+<?php
+
+namespace MagestyApps\FBComments\Helper;
+
+use Magento\Framework\App\Helper\AbstractHelper;
+
+class Data extends AbstractHelper
+{
+    const CONFIG_PATH_ENABLED       = 'magestyapps_fbcomments/general/enabled';
+    const CONFIG_PATH_POSITION      = 'magestyapps_fbcomments/general/block_position';
+    const CONFIG_PATH_COLOR_SCHEME  = 'magestyapps_fbcomments/general/color_scheme';
+    const CONFIG_PATH_NUM_POSTS     = 'magestyapps_fbcomments/general/num_posts';
+    const CONFIG_PATH_ORDER_BY      = 'magestyapps_fbcomments/general/order_by';
+    const CONFIG_PATH_WIDTH         = 'magestyapps_fbcomments/general/width';
+
+    const POSITION_AFTER_ALL                = 'after_all';
+    const POSITION_AFTER_DESCRIPTION        = 'after_description';
+    const POSITION_AFTER_SHORT_DESCRIPTION  = 'after_short_descr';
+    const POSITION_TAB                      = 'tab';
+
+    const COLOR_SCHEME_DARK     = 'dark';
+    const COLOR_SCHEME_LIGHT    = 'light';
+
+    const ORDER_BY_SOCIAL       = 'social';
+    const ORDER_BY_REVERSE_TIME = 'reverse_time';
+    const ORDER_BY_TIME         = 'time';
+
+    public function isEnabled()
+    {
+        return $this->scopeConfig->isSetFlag(self::CONFIG_PATH_ENABLED);
+    }
+
+    public function getBlockPosition()
+    {
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_POSITION);
+    }
+
+    public function getColorScheme()
+    {
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_COLOR_SCHEME);
+    }
+
+    public function getNumPosts()
+    {
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_NUM_POSTS);
+    }
+
+    public function getOrderBy()
+    {
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_ORDER_BY);
+    }
+
+    public function getWidth()
+    {
+        return $this->scopeConfig->getValue(self::CONFIG_PATH_COLOR_SCHEME);
+    }
+}
