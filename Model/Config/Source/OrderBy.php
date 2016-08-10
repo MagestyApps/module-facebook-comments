@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright © 2016 MagestyApps. All rights reserved.
- *  * See COPYING.txt for license details.
+ * See COPYING.txt for license details.
  */
 
 namespace MagestyApps\FBComments\Model\Config\Source;
