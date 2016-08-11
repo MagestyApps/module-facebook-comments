@@ -22,5 +22,4 @@ class CommentsTab extends Comments
 
         return parent::_toHtml();
     }
-
 }

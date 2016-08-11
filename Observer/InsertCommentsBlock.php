@@ -58,10 +58,8 @@ class InsertCommentsBlock implements ObserverInterface
             || ($this->_helper->getBlockPosition() == Data::POSITION_AFTER_SHORT_DESCRIPTION
                 && $elName == 'product.info.overview')
         ) {
-
             $output = $transport->getOutput();
             $transport->setData('output', $output . $commentsBlock->toHtml());
-
         }
 
         return $this;

@@ -59,9 +59,6 @@ class Comments extends Template
      */
     public function getHref()
     {
-        //// uncomment for debug purposes
-        //return 'https://developers.facebook.com/docs/plugins/comments#configurator';
-
         $product = $this->getProduct();
 
         $product->setDoNotUseCategoryId(true);
