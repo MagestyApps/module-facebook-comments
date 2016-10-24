@@ -10,7 +10,6 @@ use MagestyApps\FBComments\Helper\Data;
 
 class Position
 {
-
     public function toOptionArray()
     {
         return [
