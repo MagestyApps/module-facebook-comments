@@ -8,13 +8,19 @@ namespace MagestyApps\FBComments\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Locale\ResolverInterface;
+use MagestyApps\FBComments\Helper\Data;
 
 class Js extends Template
 {
     /**
      * @var ResolverInterface
      */
-    protected $_localeResolver;
+    private $localeResolver;
+
+    /**
+     * @var Data
+     */
+    private $helper;
 
     /**
      * Js constructor.
@@ -25,10 +31,12 @@ class Js extends Template
     public function __construct(
         Template\Context $context,
         ResolverInterface $localeResolver,
+        Data $helper,
         array $data = []
     ) {
         parent::__construct($context, $data);
-        $this->_localeResolver = $localeResolver;
+        $this->localeResolver = $localeResolver;
+        $this->helper = $helper;
     }
 
     /**
@@ -36,6 +44,24 @@ class Js extends Template
      */
     public function getPluginLocale()
     {
-        return $this->_localeResolver->getLocale();
+        return $this->localeResolver->getLocale();
+    }
+
+    /**
+     * Get url for JS snippet
+     *
+     * @return string
+     */
+    public function getJsUrl()
+    {
+        $url = "//connect.facebook.net/";
+        $url .= $this->getPluginLocale();
+        $url .= "/sdk.js#xfbml=1&version=v2.10";
+
+        if ($appId = $this->helper->getAppId()) {
+            $url .= "&appId=".$appId;
+        }
+
+        return $url;
     }
 }

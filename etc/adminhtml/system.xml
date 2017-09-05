@@ -19,6 +19,13 @@
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="app_id" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Application ID</label>
+                    <comment><![CDATA[This gives possibility to moderate comments via your facebook app control panel: <a target="_blank" href="https://developers.facebook.com/tools/comments/">https://developers.facebook.com/tools/comments/</a>]]></comment>
+                </field>
+            </group>
+            <group id="design" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Settings</label>
 
                 <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Block Position</label>
