@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2016 MagestyApps. All rights reserved.
+ * Copyright © 2017 MagestyApps. All rights reserved.
  * See COPYING.txt for license details.
  */
 

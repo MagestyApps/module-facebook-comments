@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright © 2016 MagestyApps. All rights reserved.
+  ~ Copyright © 2017 MagestyApps. All rights reserved.
   ~  * See COPYING.txt for license details.
   -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="head.additional">
+            <block class="MagestyApps\FBComments\Block\Config" name="head.fbcomments" as="head.fbcomments" template="MagestyApps_FBComments::head.phtml" before="-" />
+        </referenceBlock>
         <referenceBlock name="after.body.start">
-            <block class="MagestyApps\FBComments\Block\Js" name="fbcomments_js" template="MagestyApps_FBComments::js.phtml" />
+            <block class="MagestyApps\FBComments\Block\Config" name="fbcomments_js" template="MagestyApps_FBComments::js.phtml" />
         </referenceBlock>
         <referenceBlock name="product.info.details">
             <block class="MagestyApps\FBComments\Block\CommentsTab" name="fbcomments.tab" group="detailed_info">

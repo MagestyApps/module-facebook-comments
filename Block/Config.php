@@ -10,7 +10,7 @@ use Magento\Framework\View\Element\Template;
 use Magento\Framework\Locale\ResolverInterface;
 use MagestyApps\FBComments\Helper\Data;
 
-class Js extends Template
+class Config extends Template
 {
     /**
      * @var ResolverInterface
@@ -48,6 +48,14 @@ class Js extends Template
     }
 
     /**
+     * @return mixed
+     */
+    public function getAppId()
+    {
+        return $this->helper->getAppId();
+    }
+
+    /**
      * Get url for JS snippet
      *
      * @return string
@@ -58,7 +66,7 @@ class Js extends Template
         $url .= $this->getPluginLocale();
         $url .= "/sdk.js#xfbml=1&version=v2.10";
 
-        if ($appId = $this->helper->getAppId()) {
+        if ($appId = $this->getAppId()) {
             $url .= "&appId=".$appId;
         }
 
