@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright © 2016 MagestyApps. All rights reserved.
+  ~ Copyright © 2017 MagestyApps. All rights reserved.
   ~  * See COPYING.txt for license details.
   -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/framework/Module/etc/module.xsd">
-    <module name="MagestyApps_FBComments" setup_version="2.0.0">
+    <module name="MagestyApps_FBComments" setup_version="2.1.0">
         <sequence>
             <module name="Magento_Catalog"/>
         </sequence>
