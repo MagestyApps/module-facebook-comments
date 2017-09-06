@@ -9,5 +9,11 @@
 
 <?php if ($appId = $block->getAppId()): ?>
 <meta property="fb:app_id" content="<?php echo $appId; ?>" />
+<?php elseif ($admins = $block->getAdmins()): ?>
+
+<?php foreach ($admins as $adminId): ?>
+<meta property="fb:admins" content="<?php echo trim($adminId); ?>" />
+<?php endforeach; ?>
+
 <?php endif; ?>
 

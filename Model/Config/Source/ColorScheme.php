@@ -6,9 +6,10 @@
 
 namespace MagestyApps\FBComments\Model\Config\Source;
 
+use Magento\Framework\Data\OptionSourceInterface;
 use MagestyApps\FBComments\Helper\Data;
 
-class ColorScheme
+class ColorScheme implements OptionSourceInterface
 {
     public function toOptionArray()
     {

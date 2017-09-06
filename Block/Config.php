@@ -52,7 +52,23 @@ class Config extends Template
      */
     public function getAppId()
     {
+        if ($this->helper->getModerationType() != Data::MODERATION_TYPE_APP) {
+            return false;
+        }
+
         return $this->helper->getAppId();
+    }
+
+    /**
+     * @return bool|mixed
+     */
+    public function getAdmins()
+    {
+        if ($this->helper->getModerationType() != Data::MODERATION_TYPE_ACCOUNT) {
+            return false;
+        }
+
+        return $this->helper->getAdmins();
     }
 
     /**
