@@ -1,10 +1,8 @@
 {
-  "name": "magestyapps/module-fbcomments",
+  "name": "magestyapps/magento2-facebook-comments",
   "description": "Facebook Comments module for Magento 2",
   "require": {
-    "php": "~5.5.0|~5.6.0|~7.0.0",
-    "magento/module-catalog": "100.0.*",
-    "magento/module-ui": "100.0.*"
+    "php": ">=5.5.0"
   },
   "type": "magento2-module",
   "version": "2.1.0",
