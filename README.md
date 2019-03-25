@@ -1,4 +1,4 @@
-# Facebook Comments from Magento 2
+# Facebook Comments for Magento 2
 ## Description
 The module integrates [Facebook Comments plugin](https://developers.facebook.com/docs/plugins/comments/) into Magento 2 product pages. Customers can leave feadback using their facebook accounts.
 
