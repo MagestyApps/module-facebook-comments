@@ -11,6 +11,7 @@
             </general>
             <design>
                 <block_position>after_all</block_position>
+                <tab_title>Facebook Comments</tab_title>
                 <color_scheme>light</color_scheme>
                 <num_posts>5</num_posts>
                 <order_by>social</order_by>

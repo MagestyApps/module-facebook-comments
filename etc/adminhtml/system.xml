@@ -15,22 +15,22 @@
             <resource>MagestyApps_FBComments::settings</resource>
             <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Settings</label>
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="moderation_type" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="moderation_type" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Moderate Comments</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\ModerationType</source_model>
                 </field>
-                <field id="app_id" translate="label comment" type="text" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="app_id" translate="label comment" type="text" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Application ID</label>
                     <comment><![CDATA[This gives possibility to moderate comments via your facebook app control panel: <a target="_blank" href="https://developers.facebook.com/tools/comments/">https://developers.facebook.com/tools/comments/</a>]]></comment>
                     <depends>
                         <field id="*/*/moderation_type">1</field>
                     </depends>
                 </field>
-                <field id="admins" translate="label comment" type="text" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="admins" translate="label comment" type="text" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Admins</label>
                     <comment><![CDATA[Comma-separated list of facebook account IDs that can moderate comments. Here you can find your facebook account ID: <a target="_blank" href="https://findmyfbid.com/">https://findmyfbid.com/</a>]]></comment>
                     <depends>
@@ -41,29 +41,36 @@
             <group id="design" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Design Settings</label>
 
-                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Block Position</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\Position</source_model>
                 </field>
 
-                <field id="color_scheme" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="tab_title" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Tab Title</label>
+                    <depends>
+                        <field id="*/*/block_position">tab</field>
+                    </depends>
+                </field>
+
+                <field id="color_scheme" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Color Scheme</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\ColorScheme</source_model>
                     <comment><![CDATA[The color scheme used by the comments plugin.]]></comment>
                 </field>
 
-                <field id="num_posts" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="num_posts" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Number of Comments</label>
                     <comment><![CDATA[The number of comments to show by default. The minimum value is 1.]]></comment>
                 </field>
 
-                <field id="order_by" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="order_by" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Default Order By</label>
                     <source_model>MagestyApps\FBComments\Model\Config\Source\OrderBy</source_model>
                     <comment><![CDATA[The order to use when displaying comments. Can be "social", "reverse_time", or "time".]]></comment>
                 </field>
 
-                <field id="width" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="width" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Width of the Plugin</label>
                     <comment><![CDATA[The width of the comments plugin on the webpage. This can be either a pixel value or a percentage (such as 100%) for fluid width. The mobile version of the comments plugin ignores the width parameter and instead has a fluid width of 100%. The minimum width supported by the comments plugin is 320px.]]></comment>
                 </field>

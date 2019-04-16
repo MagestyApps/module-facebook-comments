@@ -18,12 +18,12 @@ class Comments extends Template
     /**
      * @var Data
      */
-    protected $_helper;
+    protected $helper;
 
     /**
      * @var Registry
      */
-    protected $_coreRegistry;
+    protected $coreRegistry;
 
     /**
      * Comments constructor.
@@ -40,8 +40,8 @@ class Comments extends Template
         array $data = []
     ) {
         parent::__construct($context, $data);
-        $this->_helper = $helper;
-        $this->_coreRegistry = $coreRegistry;
+        $this->helper = $helper;
+        $this->coreRegistry = $coreRegistry;
     }
 
     /**
@@ -49,7 +49,7 @@ class Comments extends Template
      */
     public function getProduct()
     {
-        return $this->_coreRegistry->registry('current_product');
+        return $this->coreRegistry->registry('current_product');
     }
 
     /**
@@ -74,7 +74,7 @@ class Comments extends Template
      */
     public function getColorScheme()
     {
-        return $this->_helper->getColorScheme();
+        return $this->helper->getColorScheme();
     }
 
     /**
@@ -82,7 +82,7 @@ class Comments extends Template
      */
     public function getNumPosts()
     {
-        return $this->_helper->getNumPosts();
+        return $this->helper->getNumPosts();
     }
 
     /**
@@ -90,7 +90,7 @@ class Comments extends Template
      */
     public function getOrderBy()
     {
-        return $this->_helper->getOrderBy();
+        return $this->helper->getOrderBy();
     }
 
     /**
@@ -98,7 +98,7 @@ class Comments extends Template
      */
     public function getWidth()
     {
-        return $this->_helper->getWidth();
+        return $this->helper->getWidth();
     }
 
     /**
@@ -106,7 +106,7 @@ class Comments extends Template
      */
     protected function _toHtml()
     {
-        if (!$this->_helper->isEnabled()
+        if (!$this->helper->isEnabled()
             || !$this->getProduct()
             || !$this->getHref()
         ) {

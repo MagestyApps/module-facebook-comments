@@ -12,11 +12,7 @@
             <block class="MagestyApps\FBComments\Block\Config" name="fbcomments_js" template="MagestyApps_FBComments::js.phtml" />
         </referenceBlock>
         <referenceBlock name="product.info.details">
-            <block class="MagestyApps\FBComments\Block\CommentsTab" name="fbcomments.tab" group="detailed_info">
-                <arguments>
-                    <argument translate="true" name="title" xsi:type="string">Facebook Comments</argument>
-                </arguments>
-            </block>
+            <block class="MagestyApps\FBComments\Block\CommentsTab" name="fbcomments.tab" group="detailed_info" />
         </referenceBlock>
     </body>
 </page>
