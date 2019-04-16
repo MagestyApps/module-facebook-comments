@@ -16,7 +16,7 @@ class CommentsTab extends Comments
      */
     protected function _toHtml()
     {
-        if ($this->_helper->getBlockPosition() != Data::POSITION_TAB) {
+        if ($this->helper->getBlockPosition() != Data::POSITION_TAB) {
             return '';
         }
 
