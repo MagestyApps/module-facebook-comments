@@ -20,6 +20,8 @@ class CommentsTab extends Comments
             return '';
         }
 
+        $this->setData('title', $this->helper->getTabTitle());
+
         return parent::_toHtml();
     }
 }
