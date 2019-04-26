@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright © 2017 MagestyApps. All rights reserved.
-  ~  * See COPYING.txt for license details.
-  -->
+/**
+ * Copyright © 2019 MagestyApps. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/framework/Module/etc/module.xsd">
     <module name="MagestyApps_FBComments" setup_version="2.1.5">
         <sequence>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright © 2017 MagestyApps. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © 2019 MagestyApps. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 
 namespace MagestyApps\FBComments\Block;
