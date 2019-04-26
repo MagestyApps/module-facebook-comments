@@ -14,7 +14,11 @@
             <block class="MagestyApps\FBComments\Block\Config" name="fbcomments_js" template="MagestyApps_FBComments::js.phtml" />
         </referenceBlock>
         <referenceBlock name="product.info.details">
-            <block class="MagestyApps\FBComments\Block\CommentsTab" name="fbcomments.tab" group="detailed_info" />
+            <block class="MagestyApps\FBComments\Block\CommentsTab" name="fbcomments.tab" group="detailed_info">
+                <arguments>
+                    <argument name="sort_order" xsi:type="string">31</argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>
