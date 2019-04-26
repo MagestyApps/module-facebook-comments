@@ -6,7 +6,7 @@ The module integrates [Facebook Comments plugin](https://developers.facebook.com
 ### via Composer
 Run the following command via command line:
 
-`composer require magestyapps/magento2-facebook-comments`
+`composer require magestyapps/module-facebook-comments`
 
 and then:
 

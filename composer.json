@@ -1,5 +1,5 @@
 {
-  "name": "magestyapps/magento2-facebook-comments",
+  "name": "magestyapps/module-facebook-comments",
   "description": "Facebook Comments module for Magento 2",
   "require": {
     "php": ">=5.5.0"
